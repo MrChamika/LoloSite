@@ -3,8 +3,8 @@
 ---
 
 <!-- Desktop Navbar -->
-<nav class="hidden md:block nav-pill-drop" aria-label="Main navigation">
-  <div class="relative rounded-full border border-white/60 bg-white/20 backdrop-blur-2xl p-1.5 flex items-center gap-3 overflow-hidden shadow-[0_14px_45px_rgba(0,0,0,0.24),inset_0_1px_1px_rgba(255,255,255,0.55),inset_0_-8px_16px_rgba(255,255,255,0.14)]">
+<div class="hidden md:block fixed top-8 left-0 right-0 z-50 flex justify-center px-4">
+  <nav class="relative rounded-full border border-white/60 bg-white/20 backdrop-blur-2xl p-1.5 flex items-center gap-3 overflow-hidden shadow-[0_14px_45px_rgba(0,0,0,0.24),inset_0_1px_1px_rgba(255,255,255,0.55),inset_0_-8px_16px_rgba(255,255,255,0.14)]" style="width:fit-content;max-width:min(100vw - 3rem, 56rem)">
     <div class="pointer-events-none absolute inset-[1px] rounded-full bg-gradient-to-b from-white/45 via-white/8 to-transparent"></div>
     <div class="pointer-events-none absolute -top-4 left-8 h-8 w-40 rounded-full bg-white/35 blur-md"></div>
     <a href="#hero" class="relative z-10 flex items-center justify-center w-10 h-10 rounded-full overflow-hidden p-0 border border-white/50 hover:border-white/80 transition-all group shrink-0 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)]" aria-label="Loro Labs home">
@@ -30,8 +30,8 @@
         <span class="block w-4 h-[1.5px] rounded-full bg-white"></span>
       </button>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>
 
 <!-- Mobile Navbar -->
 <nav class="fixed top-5 left-4 right-4 z-50 md:hidden" aria-label="Mobile navigation">
