@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://mrchamika.github.io',
-  base: '/LoloSite',
+  base: '/',
   vite: {
     plugins: [tailwindcss()],
   },
