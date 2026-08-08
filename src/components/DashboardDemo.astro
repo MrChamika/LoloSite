@@ -1,0 +1,64 @@
+---
+// Dashboard Demo CTA Section
+---
+
+<section class="py-24 md:py-32 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div class="relative rounded-3xl overflow-hidden bg-warm-900 p-8 md:p-16">
+      <!-- Background Glow -->
+      <div class="absolute inset-0 dashboard-glow"></div>
+      
+      <!-- Floating Blobs -->
+      <div class="bento-blob w-64 h-64 bg-coral top-0 right-0 opacity-20"></div>
+      <div class="bento-blob w-48 h-48 bg-teal bottom-0 left-0 opacity-15" style="animation-delay: -3s;"></div>
+      <div class="bento-blob w-32 h-32 bg-gold top-1/2 left-1/2 opacity-10" style="animation-delay: -6s;"></div>
+
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Text -->
+        <div class="css-reveal">
+          <p class="text-sm font-accent text-coral tracking-widest uppercase mb-4">Live Demo</p>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4 leading-tight">
+            Play with your project<br/>
+            <span class="gradient-text">before we build it.</span>
+          </h2>
+          <p class="text-warm-800 mb-8 leading-relaxed">
+            A fully clickable preview of the dashboard every Loro engagement ships with. Poke around. Open a case study. Play a film. No signup, no demo call — just the studio, live.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/demo/" class="gradient-btn inline-flex items-center gap-2 text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity">
+              Launch the demo
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+          </div>
+          <p class="text-white/50 text-sm mt-4 font-accent">~30 seconds · no signup · nothing mocked</p>
+        </div>
+
+        <!-- Preview Image -->
+        <div class="relative css-reveal" style="transition-delay: 200ms;">
+          <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <picture>
+              <source media="(max-width: 767px)" srcset="/dashboard-preview-mobile.webp" />
+              <source media="(min-width: 768px)" srcset="/dashboard-preview.webp" />
+              <img
+                src="/dashboard-preview.webp"
+                alt="Loro Labs live demo preview"
+                class="w-full h-auto"
+                loading="lazy"
+              />
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-warm-900/60 via-transparent to-transparent"></div>
+          </div>
+          <!-- Floating URL Badge -->
+          <div class="absolute -bottom-4 left-8 bg-white rounded-xl px-4 py-2 shadow-lg flex items-center gap-2">
+            <span class="text-warm-800 font-accent text-sm font-medium">lorolabs.ai/demo</span>
+            <svg class="w-4 h-4 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

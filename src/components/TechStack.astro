@@ -1,0 +1,59 @@
+---
+// Tech Stack Marquee Section
+const techStack = [
+  'Astro', 'React', 'Next.js', 'TypeScript', 'Vite', 'Tailwind CSS',
+  'shadcn/ui', 'GSAP', 'Framer', 'Supabase', 'Docker', 'GitHub',
+  'Vercel', 'Railway', 'Upstash', 'Node.js', 'PostgreSQL'
+];
+
+const aiTools = [
+  { name: 'OpenAI', image: '/ai-openai.png' },
+  { name: 'Claude', image: '/ai-claude.png' },
+  { name: 'Midjourney', image: '/ai-midjourney.png' },
+  { name: 'Flow', image: '/ai-flow.png' },
+];
+---
+
+<section id="stack" class="py-24 md:py-32 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 mb-12">
+    <div class="text-center css-reveal">
+      <p class="text-sm font-accent text-coral tracking-widest uppercase mb-2">Built With</p>
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-warm-800 mb-4">A Modern, Production-Grade Stack</h2>
+      <p class="text-warm-600 max-w-2xl mx-auto">
+        The same frameworks and infrastructure trusted by the best teams in tech, so your product launches fast, scales effortlessly, and never feels outdated.
+      </p>
+    </div>
+  </div>
+
+  <!-- Marquee -->
+  <div class="relative">
+    <!-- Gradient overlays -->
+    <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+    <div class="overflow-hidden">
+      <div class="marquee-track">
+        {[...techStack, ...techStack].map((tech) => (
+          <div class="tech-icon flex-shrink-0 mx-6 px-6 py-4 bg-warm-50 rounded-2xl border border-warm-100 hover:border-coral hover:shadow-lg transition-all cursor-default">
+            <span class="text-warm-700 font-accent font-medium whitespace-nowrap">{tech}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Studio -->
+  <div class="max-w-7xl mx-auto px-6 md:px-12 mt-16">
+    <div class="text-center css-reveal">
+      <p class="text-sm font-accent text-teal tracking-widest uppercase mb-6">AI Studio</p>
+      <div class="flex flex-wrap justify-center gap-6">
+        {aiTools.map((tool) => (
+          <div class="tech-icon flex items-center gap-3 px-6 py-3 bg-warm-50 rounded-xl border border-warm-100 hover:border-teal hover:shadow-lg transition-all cursor-default">
+            <img src={tool.image} alt={tool.name} class="w-8 h-8 object-contain" loading="lazy" />
+            <span class="text-warm-700 font-accent font-medium">{tool.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

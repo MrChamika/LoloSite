@@ -1,0 +1,72 @@
+﻿---
+// Pricing Section
+const buildTiers = [
+  { name: 'Website - Landing Page', price: 'From \,000' },
+  { name: 'Website - Multipage', price: 'From \,000' },
+  { name: 'Platform MVP - Web', price: 'From \,000' },
+  { name: 'Platform + Mobile', price: 'From \,000', popular: true },
+  { name: 'Full Custom Platform', price: 'From \,000' },
+];
+
+const operateTier = { name: 'Operate - we build it and run it', price: 'From \/mo' };
+---
+
+<section id="pricing" class="py-24 md:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div class="text-center mb-16 css-reveal">
+      <p class="text-sm font-accent text-coral tracking-widest uppercase mb-2">Pricing</p>
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-warm-800 mb-4">Build &amp; Operate</h2>
+      <p class="text-warm-600 max-w-2xl mx-auto">
+        Choose a build tier for a bespoke website, custom web platform, or web plus native mobile. Then let us operate it for you. Priced in USD; you own everything we build.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <h3 class="text-lg font-heading font-bold text-warm-800 mb-6">Build</h3>
+        <div class="pricing-reveal-root space-y-4">
+          {buildTiers.map((tier, i) => (
+            <div
+              class:list={[
+                'pricing-stagger-item group flex items-center justify-between p-6 rounded-2xl border transition-all hover:shadow-lg cursor-pointer',
+                tier.popular ? 'border-coral/30 bg-coral/5 hover:border-coral' : 'border-warm-100 bg-warm-50 hover:border-coral/30',
+              ]}
+              style={`--stagger-i: ${i}`}
+            >
+              <div class="flex items-center gap-4">
+                {tier.popular && (
+                  <span class="px-3 py-1 bg-coral text-white text-xs font-accent font-semibold rounded-full">Most Popular</span>
+                )}
+                <span class="font-heading font-semibold text-warm-800">{tier.name}</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="text-warm-600 font-accent">{tier.price}</span>
+                <div class="service-arrow w-8 h-8 rounded-full bg-warm-100 flex items-center justify-center group-hover:bg-coral group-hover:text-white transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="text-sm text-warm-600 mt-4">
+          Every build includes full source-code ownership, hosting setup, and launch support.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-heading font-bold text-warm-800 mb-6">Operate</h3>
+        <div class="pricing-stagger-item p-6 rounded-2xl border border-teal/30 bg-teal/5 hover:border-teal hover:shadow-lg transition-all cursor-pointer" style="--stagger-i: 5">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="px-3 py-1 bg-teal text-white text-xs font-accent font-semibold rounded-full">Ongoing</span>
+          </div>
+          <h4 class="font-heading font-semibold text-warm-800 mb-2">{operateTier.name}</h4>
+          <p class="text-2xl font-heading font-bold text-teal">{operateTier.price}</p>
+          <p class="text-sm text-warm-600 mt-3">We manage hosting, updates, monitoring, and support so you can focus on growth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

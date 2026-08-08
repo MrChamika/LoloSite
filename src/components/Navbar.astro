@@ -1,0 +1,76 @@
+﻿---
+// Floating Pill Navbar - glassmorphism style
+---
+
+<!-- Desktop Navbar -->
+<nav class="hidden md:block nav-pill-drop" aria-label="Main navigation">
+  <div class="relative rounded-full border border-white/60 bg-white/20 backdrop-blur-2xl p-1.5 flex items-center gap-3 overflow-hidden shadow-[0_14px_45px_rgba(0,0,0,0.24),inset_0_1px_1px_rgba(255,255,255,0.55),inset_0_-8px_16px_rgba(255,255,255,0.14)]">
+    <div class="pointer-events-none absolute inset-[1px] rounded-full bg-gradient-to-b from-white/45 via-white/8 to-transparent"></div>
+    <div class="pointer-events-none absolute -top-4 left-8 h-8 w-40 rounded-full bg-white/35 blur-md"></div>
+    <a href="#hero" class="relative z-10 flex items-center justify-center w-10 h-10 rounded-full overflow-hidden p-0 border border-white/50 hover:border-white/80 transition-all group shrink-0 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)]" aria-label="Loro Labs home">
+      <img src="/logo-nav.webp" alt="Loro Labs" width="40" height="40" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+    </a>
+    <nav class="relative z-10 hidden md:flex items-center flex-1 justify-center gap-6 lg:gap-8 min-w-0 nav-text-glow">
+      <a href="#hero" class="text-sm font-medium text-neutral-950 hover:underline underline-offset-4 whitespace-nowrap transition-colors">Home</a>
+      <a href="#about" class="text-sm font-medium text-neutral-950 hover:underline underline-offset-4 whitespace-nowrap transition-colors">About</a>
+      <a href="#portfolio" class="text-sm font-medium text-neutral-950 hover:underline underline-offset-4 whitespace-nowrap transition-colors">Portfolio</a>
+      <a href="#services" class="text-sm font-medium text-neutral-950 hover:underline underline-offset-4 whitespace-nowrap transition-colors">Case Studies</a>
+      <a href="#dashboard-demo" class="text-sm font-medium text-neutral-950 hover:underline underline-offset-4 whitespace-nowrap transition-colors">Demo</a>
+      <a href="#contact" class="text-sm font-medium text-neutral-950 hover:underline underline-offset-4 whitespace-nowrap transition-colors">Contact</a>
+    </nav>
+    <div class="relative z-10 flex items-center gap-2 shrink-0">
+      <a href="#contact" class="w-10 h-10 rounded-full border border-black/80 bg-black text-white hover:bg-black/90 hover:border-black flex items-center justify-center transition-colors shadow-[0_4px_10px_rgba(0,0,0,0.18)]" aria-label="Get a quote">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+      <a href="tel:+639602778783" class="w-10 h-10 rounded-full border border-black/80 bg-black text-white hover:bg-black/90 hover:border-black flex items-center justify-center transition-colors shadow-[0_4px_10px_rgba(0,0,0,0.18)]" aria-label="Call Us">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <button id="desktop-menu-btn" class="w-10 h-10 rounded-full bg-black text-white border border-black/80 hover:bg-black/90 flex flex-col items-center justify-center gap-[5px] transition-colors shadow-[0_6px_14px_rgba(0,0,0,0.35)]" aria-label="Open Menu">
+        <span class="block w-4 h-[1.5px] rounded-full bg-white"></span>
+        <span class="block w-4 h-[1.5px] rounded-full bg-white"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Navbar -->
+<nav class="fixed top-5 left-4 right-4 z-50 md:hidden" aria-label="Mobile navigation">
+  <div class="flex items-center gap-2 min-h-[3.25rem] p-1.5 border border-white/70 rounded-full bg-white/80 backdrop-blur-xl shadow-[0_12px_34px_rgba(0,0,0,0.2),inset_0_1px_rgba(255,255,255,1)]">
+    <a href="#hero" class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden">
+      <img src="/logo-nav.webp" alt="Loro Labs" width="40" height="40" class="w-full h-full object-cover" />
+    </a>
+    <a href="#contact" class="flex-1 min-w-0 text-center text-neutral-950 text-xs sm:text-sm font-semibold truncate px-1">Talk to the studio</a>
+    <div class="flex items-center gap-2 shrink-0">
+      <a href="#contact" class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center transition-colors" aria-label="Contact">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+      <a href="tel:+639602778783" class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center transition-colors" aria-label="Call">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <button id="mobile-menu-btn" class="w-10 h-10 rounded-full bg-black text-white flex flex-col items-center justify-center gap-[5px] transition-colors" aria-label="Open menu">
+        <span class="block w-4 h-[1.5px] rounded-full bg-white"></span>
+        <span class="block w-4 h-[1.5px] rounded-full bg-white"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden mt-2 bg-white rounded-2xl px-4 py-4 shadow-lg">
+    <div class="flex flex-col gap-2">
+      <a href="#hero" class="text-neutral-950 text-sm py-2 hover:text-[#F92C53] transition-colors">Home</a>
+      <a href="#about" class="text-neutral-950 text-sm py-2 hover:text-[#F92C53] transition-colors">About</a>
+      <a href="#portfolio" class="text-neutral-950 text-sm py-2 hover:text-[#F92C53] transition-colors">Portfolio</a>
+      <a href="#services" class="text-neutral-950 text-sm py-2 hover:text-[#F92C53] transition-colors">Case Studies</a>
+      <a href="#dashboard-demo" class="text-neutral-950 text-sm py-2 hover:text-[#F92C53] transition-colors">Demo</a>
+      <a href="#contact" class="text-neutral-950 text-sm py-2 hover:text-[#F92C53] transition-colors">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

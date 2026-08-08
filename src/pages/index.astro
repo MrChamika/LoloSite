@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Services from '../components/Services.astro';
+import Stats from '../components/Stats.astro';
+import TechStack from '../components/TechStack.astro';
+import AccentBanner from '../components/AccentBanner.astro';
+import WhyChooseUs from '../components/WhyChooseUs.astro';
+import Pricing from '../components/Pricing.astro';
+import Industries from '../components/Industries.astro';
+import Portfolio from '../components/Portfolio.astro';
+import DashboardDemo from '../components/DashboardDemo.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Navbar />
+  <main>
+    <Hero />
+    <About />
+    <Services />
+    <Stats />
+    <TechStack />
+    <AccentBanner />
+    <WhyChooseUs />
+    <Pricing />
+    <Portfolio />
+    <Industries />
+    <DashboardDemo />
+    <ContactCTA />
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  import '../scripts/animations.js';
+</script>

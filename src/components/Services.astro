@@ -1,0 +1,130 @@
+---
+// Services Carousel Section
+const services = [
+  {
+    num: '01 / 06',
+    price: 'From \,000',
+    title: 'Website Development',
+    desc: 'A website that does more than exist: fast, sharp, and built to convert visitors into customers.',
+    iconType: 'website',
+    image: '/service-web-editorial.webp',
+    color: 'bg-coral',
+  },
+  {
+    num: '02 / 06',
+    price: 'From \,000',
+    title: 'App Development',
+    desc: 'Mobile apps that feel right and work right for real users on real devices.',
+    iconType: 'app',
+    image: '/service-app-editorial.webp',
+    color: 'bg-teal',
+  },
+  {
+    num: '03 / 06',
+    price: 'From \,000',
+    title: 'Systems Development',
+    desc: 'Custom portals, dashboards, and workflows built around how your team actually works.',
+    iconType: 'systems',
+    image: '/service-systems-editorial-v2.webp',
+    color: 'bg-gold',
+  },
+  {
+    num: '04 / 06',
+    price: 'Custom quote',
+    title: 'IT Consulting',
+    desc: 'Technology guidance to help you pick the right tools and plan your roadmap without costly mistakes.',
+    iconType: 'consulting',
+    image: '/service-consulting-editorial.webp',
+    color: 'bg-coral',
+  },
+  {
+    num: '05 / 06',
+    price: 'Custom quote',
+    title: 'AI Media',
+    desc: 'AI-generated photos, videos, and hero animations that give your brand a look your competitors cannot replicate.',
+    iconType: 'media',
+    image: '/service-ai-editorial.webp',
+    color: 'bg-teal',
+  },
+  {
+    num: '06 / 06',
+    price: 'Custom quote',
+    title: 'Brand Identity',
+    desc: 'Visual identity systems that feel intentional, from logo design to full brand guidelines.',
+    iconType: 'brand',
+    image: '/service-brand-editorial.webp',
+    color: 'bg-gold',
+  },
+];
+---
+
+<section id="services" class="py-24 md:py-32 bg-warm-50 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 mb-12">
+    <div class="flex items-end justify-between css-reveal">
+      <div>
+        <p class="text-sm font-accent text-coral tracking-widest uppercase mb-2">Services</p>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-warm-800">What We Build</h2>
+      </div>
+      <p class="text-warm-600 max-w-xs text-sm hidden md:block">Swipe to explore our full range of design engineering services.</p>
+    </div>
+  </div>
+
+  <div class="flex gap-6 overflow-x-auto pb-8 px-6 md:px-12 snap-x snap-mandatory scrollbar-hide" style="scrollbar-width: none; -ms-overflow-style: none;">
+    {services.map((service, i) => (
+      <div class="service-card group flex-shrink-0 w-[320px] md:w-[380px] snap-start bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow cursor-pointer">
+        <div class="relative h-64 md:h-72 overflow-hidden">
+          <img src={service.image} alt={service.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          <div class="absolute top-4 left-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+            {service.iconType === 'website' && (
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            )}
+            {service.iconType === 'app' && (
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            )}
+            {service.iconType === 'systems' && (
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+            )}
+            {service.iconType === 'consulting' && (
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            )}
+            {service.iconType === 'media' && (
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            )}
+            {service.iconType === 'brand' && (
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            )}
+          </div>
+          <div class="absolute top-4 right-4 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-accent font-semibold text-white">{service.num}</div>
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-xl font-heading font-bold text-warm-800 mb-2">{service.title}</h3>
+          <p class="text-warm-600 text-sm leading-relaxed mb-4">{service.desc}</p>
+
+          <div class="service-desc">
+            <div class="service-desc-inner">
+              <p class="text-warm-600 text-sm leading-relaxed pt-2 border-t border-warm-100 mt-2">
+                Every project includes discovery, design, development, and launch support. We handle the full stack so you can focus on your business.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex justify-end mt-4">
+            <div class="service-arrow w-10 h-10 rounded-full bg-warm-50 flex items-center justify-center group-hover:bg-coral group-hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>
