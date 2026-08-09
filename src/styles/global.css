@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 @layer base {
   :root {
@@ -457,25 +457,4 @@
   }
 }
 
-/* ===== CUSTOM CURSOR ===== */
-.custom-cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #F92C53;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.15s ease;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
-}
 
-.custom-cursor.hover {
-  transform: translate(-50%, -50%) scale(2);
-  background-color: rgba(249, 44, 83, 0.1);
-}
-
-* {
-  cursor: none !important;
-}
